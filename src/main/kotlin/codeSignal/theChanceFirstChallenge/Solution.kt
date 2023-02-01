@@ -1,10 +1,10 @@
 package codeSignal.theChanceFirstChallenge
 
 fun solution(list: List<String>) = if ("a" in list && "b" in list && list.all { it == "a" || it == "b" })
-    list.count { it == "a" } / list.size.toDouble() else -1.0
+    list.count { it == "a" } / list.size.toFloat() else -1f
 
 fun main() {
-    println(solution(listOf("a", "b")))
+    println(solution(mutableListOf("'a' ", "b")))
 }
 
 //val newList = list.filter { it == "a" || it == "b" }
@@ -23,4 +23,4 @@ fun main() {
 
 //latest enhanced solution
 //fun solution(list: List<String>) = if ("a" in list && "b" in list && list.all { it == "a" || it == "b" })
-//    list.count { it == "a" } / list.size.toDouble() else -1.0
+//    list.count { it == "a" } / list.size.toFloat() else -1f
