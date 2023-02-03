@@ -6,11 +6,11 @@ package codeSignal.theChanceFirstChallenge
  * @see list contains only "a" and "b" and it must contain both "a" and "b"
  * @return percentage of "a" into Float number in list while the condition is true , else it returns -1.0
  */
-fun solution(list:List<String>) = if ("a" in list && "b" in list && list.all { it in "a".."b" })
+fun solution(list:List<String>) = if (list.filter { it in "a".."b" && "a" in list && "b" in list} == list)
     list.count { it == "a" } / (list.size + 0f) else -1f
 
 fun main() {
-    println(solution(mutableListOf()))
+    println(solution(listOf("a" )))
 }
 
 //val newList = list.filter { it == "a" || it == "b" }
