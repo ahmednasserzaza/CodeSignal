@@ -1,12 +1,16 @@
 package codeSignal.theChanceFirstChallenge
 
-import org.w3c.dom.ranges.Range
-
+/**
+ * This function used to calculate number of a's in the list
+ * @param list this list of Strings is inserted by user
+ * @see list contains only "a" and "b" and it must contain both "a" and "b"
+ * @return percentage of "a" into Float number in list while the condition is true , else it returns -1.0
+ */
 fun solution(list:List<String>) = if ("a" in list && "b" in list && list.all { it in "a".."b" })
-    list.count { it == "a" } / list.size.toFloat() else -1f
+    list.count { it == "a" } / (list.size + 0f) else -1f
 
 fun main() {
-    println(solution(mutableListOf("a" , "a" , "a" , "b" , "aa")))
+    println(solution(mutableListOf()))
 }
 
 //val newList = list.filter { it == "a" || it == "b" }
