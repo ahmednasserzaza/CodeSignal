@@ -7,11 +7,12 @@ package codeSignal.theChanceFirstChallenge
  * @return percentage of "a" into Float number in list while the condition is true , else it returns -1.0
  */
 fun solution(list:List<String>) = if ("a" in list && "b" in list && list.all { it in "a".."b" })
-    list.count { it == "a" } / list.size.toFloat() else -1f
+    list.count { it =="a" } / list.size.toFloat() else -1f
 
 fun main() {
-    println(solution(listOf("a"  )))
+    println(solution(listOf("a" , "b" , "ab")))
 }
+//it in "a".."b" && "a" in list && "b" in list
 
 //val newList = list.filter { it == "a" || it == "b" }
 //val numOfAs = list.count { it == "a" }.toDouble()
