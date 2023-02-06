@@ -11,8 +11,28 @@ fun solution(n: Int): Boolean {
 fun main() {
     println(solution(1230))
 }
+/*
+fun solution(n: Int): Boolean {
+    val value = "$n"
+    val half = value.length/2
+    var piece1 = 0
+    var piece2 = 0
 
+    for(i in 0 until value.length)
+    {
+        if(i < half)
+        {
+            piece1 += value[i].toInt()
+        }
+        else
+        {
+            piece2 += value[i].toInt()
+        }
+    }
 
+    return piece1 == piece2
+}
+ */
 /*
 fun solution(n: Int): Boolean {
     val nStr = n.toString()
